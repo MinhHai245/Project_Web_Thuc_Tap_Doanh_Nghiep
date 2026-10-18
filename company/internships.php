@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require __DIR__ . '/_common.php';
 if (!$company) { header('Location: profile.php'); exit; }
 
@@ -79,4 +79,4 @@ company_header('Quản lý thực tập');
 		</article>
 	<?php endwhile; endif; ?>
 </div>
-<?php company_footer(); ?>
+<?php company_footer(); ?> -->

@@ -9,7 +9,7 @@ if (($_SESSION['account_role'] ?? '') !== 'company') {
 	exit('Bạn không có quyền truy cập khu vực doanh nghiệp.');
 }
 
-$con = mysqli_connect('localhost', 'root', '', 'phplogin');
+$con = mysqli_connect('localhost', 'root', '123456', 'phplogin');
 if (!$con) {
 	exit('Không thể kết nối cơ sở dữ liệu: ' . mysqli_connect_error());
 }
@@ -25,7 +25,7 @@ function e($value) {
 	return htmlspecialchars((string)($value ?? ''), ENT_QUOTES, 'UTF-8');
 }
 function company_header($title) {
-	echo '<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><title>' . e($title) . '</title><link href="../css/style.css?v=' . filemtime(__DIR__ . '/../css/style.css') . '" rel="stylesheet" type="text/css"></head><body><header class="header company-header"><div class="wrapper company-header-wrapper"><h1>Cổng doanh nghiệp</h1><nav class="menu"><a href="dashboard.php">Tổng quan</a><a href="profile.php">Hồ sơ</a><a href="posts.php">Bài đăng</a><a href="applications.php">Ứng tuyển</a><a href="internships.php">Thực tập</a><a href="evaluations.php">Đánh giá</a><a href="../logout.php">Đăng xuất</a></nav></div></header><div class="content company-content">';
+	echo '<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,minimum-scale=1"><title>' . e($title) . '</title><link href="../css/style.css?v=' . filemtime(__DIR__ . '/../css/style.css') . '" rel="stylesheet" type="text/css"></head><body><header class="header company-header"><div class="wrapper company-header-wrapper"><h1>Cổng doanh nghiệp</h1><nav class="menu"><a href="dashboard.php">Tổng quan</a><a href="profile.php">Hồ sơ</a><a href="posts.php">Bài đăng</a><a href="apply.php">Ứng tuyển</a><a href="students_internship.php">Thực tập</a><a href="evaluations.php">Đánh giá</a><a href="../logout.php">Đăng xuất</a></nav></div></header><div class="content company-content">';
 }
 function company_footer() {
 	echo '</div></body></html>';
