@@ -7,10 +7,8 @@ if (!$company) {
     exit;
 }
 
-// Thêm cột nếu database chưa có.
-// MySQL 8 có thể không hỗ trợ cú pháp ADD COLUMN IF NOT EXISTS
-// trên một số phiên bản, vì vậy nên tạo cột bằng migration SQL riêng
-// nếu các cột này chưa tồn tại.
+
+
 
 $allowed = ['submitted', 'reviewing', 'accepted', 'rejected'];
 
